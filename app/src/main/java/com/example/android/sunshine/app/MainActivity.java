@@ -1,17 +1,10 @@
 package com.example.android.sunshine.app;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
-import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -22,7 +15,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, new ForecastFragment())
                     .commit();
         }
     }
@@ -49,37 +42,4 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        private ArrayAdapter<String> adapter;
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-
-            ArrayList<String> forecast = new ArrayList<String>();
-            forecast.add("Today - Sunny - 88/63");
-            forecast.add("Tomorrow - Foggy - 70/46");
-            forecast.add("Weds - Cloudy - 72/63");
-            forecast.add("Thurs - Rainy - 64/51");
-            forecast.add("Fri - Foggy - 70/46");
-            forecast.add("Sat - Sunny - 76/68");
-            forecast.add("Sun - Sunny - 80/68");
-
-            adapter = new ArrayAdapter<String>(getActivity(),
-                    R.layout.list_item_forecast, R.id.list_item_forecast_textview, forecast);
-
-            ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
-            listView.setAdapter(adapter);
-
-            return rootView;
-        }
-    }
 }
