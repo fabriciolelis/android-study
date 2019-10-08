@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="name">Fabrício Lélis</string>
+    <string name="yellow_star">Yellow Star</string>
+    <string name="bio"> My name is Fabrício Lélis. I am a Msc. candidate in Computer Science from COPIN, located at the Federal University of Campina Grande.
+        \nI have a BS in Computer Science from the same university (2008).
+        \nI participated for three years in the Brazil-IP project that aims to develop talents in design of digital systems and intellectual property (IPs).
+        \nThis work happened in Dedicated Architectures Laboratory (LAD).
+        \n I participated for one year ALTATV project that aims to develop a set-top-box for digital TV in Brazil at low cost.
+        \nI was a member of the DH-CETENE for three years. The mission of the Design House was to provide high quality services in research and development and design of circuits and systems. The DH-CETENE is a member of CI-Brazil, a government program maintained by the Ministry of Science and Technology ( MCT ).</string>
+    <string name="whats_your_nickname">What\'s your nickname?</string>
+    <string name="done">Done</string>
+</resources>
